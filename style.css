@@ -1,0 +1,268 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow-x: 0;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Alata', sans-serif;
+	width: 100%;
+	max-width: 1440px;
+}
+
+h1,
+h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+header,
+main,
+footer {
+	width: 100%;
+	padding: 100px 150px;
+}
+/*HEADER SECTION*/
+header {
+	background-image: url(images/desktop/image-hero.jpg);
+
+	background-repeat: none;
+	background-position: center;
+	background-size: cover;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 70px;
+}
+li a {
+	text-decoration: none;
+	color: inherit;
+}
+nav ul {
+	display: flex;
+	color: #fff;
+	gap: 30px;
+	list-style: none;
+}
+ul li {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #fff;
+	border-color: transparent;
+	transition: border linear 500ms;
+}
+nav ul li:hover {
+	border-color: #fff;
+}
+.text-box {
+	width: 600px;
+	border: 2px solid #fff;
+	padding: 40px;
+}
+.text-box h1 {
+	font-size: 4rem;
+	line-height: 1;
+	overflow-wrap: break-word;
+}
+
+/* FIRST SECTION */
+section.VR {
+	display: flex;
+	margin-top: 50px;
+}
+.VR-text {
+	color: hsl(0, 0%, 55%);
+	padding: 100px 0 0 90px;
+	margin-left: -150px;
+	background-color: #fff;
+	height: 70%;
+	align-self: flex-end;
+}
+.VR-text h2 {
+	color: hsl(0, 0%, 0%);
+	font-size: 3rem;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+
+section.creations {
+	margin-top: 150px;
+}
+.creations .top {
+	display: flex;
+	justify-content: space-between;
+}
+.top h1 {
+	color: hsl(0, 0%, 0%);
+	font-size: 2.25rem;
+}
+button {
+	padding: 10px 40px;
+	background-color: #fff;
+	border: 1px solid hsl(0, 0%, 0%);
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+}
+button:hover {
+	background-color: hsl(0, 0%, 0%);
+	color: #fff;
+	cursor: pointer;
+}
+
+.gallery-grid {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 30px;
+}
+
+.gallery {
+	margin-bottom: 20px;
+}
+.gallery h2 {
+	margin-left: 30px;
+	width: 50%;
+	margin-top: -80px;
+	font-weight: 400;
+}
+.gallery:hover img {
+	cursor: pointer;
+	opacity: 0.5;
+	transition: all ease-in-out 500ms;
+}
+.gallery:hover h2 {
+	color: #000;
+}
+
+/* FOOTER */
+footer {
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer section {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.icons {
+	align-self: flex-end;
+}
+
+.rights {
+	color: hsl(0, 0%, 41%);
+}
+.icons img + img {
+	margin-left: 10px;
+}
+.icons img {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #fff;
+	border-color: transparent;
+	transition: border ease-in-out 500ms;
+}
+.icons img:hover {
+	border-color: #fff;
+	cursor: pointer;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* DISPLAYS */
+.mobile {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+
+	header,
+	main,
+	footer {
+		padding: 80px 40px;
+	}
+	/* HEADER */
+	header {
+		background-image: url(images/mobile/image-hero.jpg);
+	}
+
+	/* SECION VR */
+	section.VR {
+		flex-direction: column;
+		width: 100%;
+	}
+	.VR-image img {
+		width: 100%;
+	}
+	.VR-text {
+		margin: 0;
+		margin-top: 20px;
+		padding: 20px;
+		text-align: center;
+		font-size: 1.25rem;
+		line-height: 2;
+	}
+	/* GALLERY-GRID */
+	.top h1 {
+		width: 100%;
+		text-align: center;
+	}
+	.gallery-grid {
+		display: flex;
+		gap: 40px;
+		flex-direction: column;
+		width: 100%;
+	}
+	img.mobile {
+		width: 100%;
+	}
+	.gallery h2 {
+		margin-top: -100px;
+		font-size: 2rem;
+		width: 40%;
+	}
+	button.mobile {
+		margin: 40px auto;
+		letter-spacing: 5px;
+		padding: 15px 60px;
+	}
+
+	/* FOOTER */
+	footer {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	footer nav ul {
+		margin-top: 40px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.25rem;
+	}
+	.icons {
+		align-self: center;
+		margin-top: 50px;
+	}
+}
