@@ -209,6 +209,10 @@ footer section {
 	header {
 		background-image: url(images/mobile/image-hero.jpg);
 	}
+	.hamburger:hover,
+	.close:hover {
+		cursor: pointer;
+	}
 	.text-box {
 		width: 100%;
 		padding: 20px;
