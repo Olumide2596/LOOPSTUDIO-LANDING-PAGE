@@ -5,11 +5,21 @@
 	overflow-x: 0;
 }
 
+img,
+svg,
+picture {
+	max-width: 100%;
+}
+
 body {
 	font-size: 15px;
 	font-family: 'Alata', sans-serif;
 	width: 100%;
-	max-width: 1440px;
+}
+.container {
+	max-width: 80em; /*this limits the width*/
+	margin-inline: auto; /*this centers the children containers*/
+	padding-inline: 4rem; /*this adds padding when width is less than 80em */
 }
 
 h1,
@@ -71,9 +81,13 @@ nav ul li:hover {
 }
 
 /* FIRST SECTION */
-section.VR {
+div.VR {
 	display: flex;
 	margin-top: 50px;
+	width: 100%;
+}
+.VR-image {
+	width: 200%;
 }
 .VR-text {
 	color: hsl(0, 0%, 55%);
@@ -90,7 +104,7 @@ section.VR {
 	margin-bottom: 20px;
 }
 
-section.creations {
+div.creations {
 	margin-top: 150px;
 }
 .creations .top {
@@ -143,20 +157,26 @@ button:hover {
 
 /* FOOTER */
 footer {
+	margin: 0;
 	background-color: #000;
 	color: #fff;
+}
+.footer {
 	display: flex;
 	justify-content: space-between;
 }
 
-footer section {
+.part {
+	width: 100%;
 	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
+
 	gap: 30px;
 }
 
-.icons {
+.icons,
+.rights {
 	align-self: flex-end;
 }
 
@@ -203,7 +223,10 @@ footer section {
 	header,
 	main,
 	footer {
-		padding: 80px 40px;
+		padding: 80px 0px;
+	}
+	.container {
+		padding-inline: 2rem;
 	}
 	/* HEADER */
 	header {
@@ -219,7 +242,7 @@ footer section {
 		margin: 200px 0;
 	}
 	.text-box h1 {
-		font-size: 3rem;
+		font-size: 3em;
 	}
 	/* MOBILE NAV */
 	.navigation {
@@ -231,7 +254,7 @@ footer section {
 		height: 100vh;
 		background-color: #000;
 	}
-	.navigation section {
+	.navigation div {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 120px;
@@ -248,11 +271,11 @@ footer section {
 		border: none;
 	}
 	/* SECION VR */
-	section.VR {
+	div.VR {
 		flex-direction: column;
 		width: 100%;
 	}
-	.VR-image img {
+	.VR-image {
 		width: 100%;
 	}
 	.VR-text {
@@ -289,12 +312,15 @@ footer section {
 	}
 
 	/* FOOTER */
-	footer {
+	.footer {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
-	footer nav ul {
+	.footer-logo {
+		align-self: center;
+	}
+	.footer nav ul {
 		margin-top: 40px;
 		flex-direction: column;
 		justify-content: center;
@@ -304,5 +330,8 @@ footer section {
 	.icons {
 		align-self: center;
 		margin-top: 50px;
+	}
+	.rights {
+		align-self: center;
 	}
 }
