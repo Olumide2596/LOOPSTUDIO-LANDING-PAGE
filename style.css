@@ -34,7 +34,7 @@ header,
 main,
 footer {
 	width: 100%;
-	padding: 100px 150px;
+	padding: 100px 0;
 }
 /*HEADER SECTION*/
 header {
@@ -139,12 +139,17 @@ button:hover {
 
 .gallery {
 	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
 }
 .gallery h2 {
 	margin-left: 30px;
 	width: 50%;
 	margin-top: -80px;
 	font-weight: 400;
+}
+.gallery img {
+	object-fit: cover;
 }
 .gallery:hover img {
 	cursor: pointer;
